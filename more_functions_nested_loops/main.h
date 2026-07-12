@@ -4,6 +4,7 @@
 
 int add(int, int);
 int _abs(int);
+int _isdigit(int c);
 int _isupper(int c);
 int _isalpha(int c);
 int _putchar(char c);
