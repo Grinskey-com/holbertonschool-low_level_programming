@@ -13,7 +13,7 @@ int main(void)
 	
 	do 
 	{
-		//Display calculator menu	
+		/*Display calculator menu*/	
 		printf("\nWelccome to the calculator app!\n");
 		printf("1. Add\n");
 		printf("2. Subtract\n");
@@ -21,17 +21,16 @@ int main(void)
 		printf("4. Divide\n");
 		printf("0. Quit\n");
 
-		//Input from user
-		//Ensure input used is an interger
+		/*Input from user, Ensure input used is an interger*/
 		if (scanf("%d", &choice) != 1)
 		{
 			printf("Invalid input. Please enter a number.\n");
-			//Clear invalid input
-			while (getchar() != '\n')//clear input
+			/*Clear invalid input*/
+			while (getchar() != '\n')/*clear input*/
  			continue;
 		}	
 
-		//next check the interger is within the option range 0-4
+		/*next check the interger is within the option range 0-4*/
 		if (choice < 0 || choice > 4)
 		{
 			printf("invalid niput. Please enter a number from 0-4.\n");
@@ -45,7 +44,7 @@ int main(void)
  		}
 
 
-	} while(choice != 0);//Keep looping until exit is selected
+	} while(choice != 0);/*Keep looping until exit is selected*/
 		
 	return(0);	
 }		
