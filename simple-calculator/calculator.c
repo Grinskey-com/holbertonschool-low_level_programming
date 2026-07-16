@@ -50,6 +50,19 @@ int main(void)
 			printf("Result: %.2f\n", result);
 
 		}
+
+		/*Subtraction program*/		
+		if (choice == 2)
+		{
+			printf("A: ");
+			scanf("%lf", &a);
+			printf("B: ");
+			scanf("%lf", &b);
+
+			result = a - b;
+			printf("Result: %.2f\n", result);
+
+		}
 		if (choice == 0)
 			{	
 			printf("Bye for now!\n");	
