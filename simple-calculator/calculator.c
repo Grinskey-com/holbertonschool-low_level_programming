@@ -78,6 +78,26 @@ int main(void)
 
 		}
 
+		/*Division program*/		
+		if (choice == 4)
+		{
+			printf("A: ");
+			scanf("%lf", &a);
+			printf("B: ");
+			scanf("%lf", &b);
+
+			if (b == 0)
+			{
+				printf("Error: division by zero.\n");
+			}
+			else
+			{
+				result = a / b;
+				printf("Result: %.2f\n", result);
+			}
+
+
+		}
 
 
 		if (choice == 0)
