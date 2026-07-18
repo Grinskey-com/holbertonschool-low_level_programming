@@ -1,8 +1,8 @@
 #include "main.h"
 
 /*
- * Takes existing int, modifies the value using pointer.
- *
+ * reser_to_98 - sets the value pointed to by n to 98
+ * @n: pointer to the in to modify
  *
  */
 
