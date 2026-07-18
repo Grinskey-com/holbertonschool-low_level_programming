@@ -6,10 +6,17 @@
  */
 void puts2(char *str)
 {
+	int len = 0;
 	int i;
 
-	/* Start at 0, check for the null terminator, hop by 2 */
-	for (i = 0; str[i] != '\0'; i += 2)
+	/* Step 1: Find the end */
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+
+	/* Step 2: Use the exact integer length as a strict boundary*/
+	for (i = 0; i < len; i += 2)
 	{
 		_putchar(str[i]);
 	}
