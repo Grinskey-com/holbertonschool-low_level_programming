@@ -26,7 +26,7 @@ and the program concludes by dropping down to a clean new line.
 **1 strncat: *char *_strncat(char *dest, char *src, int n) is a program that appends text from a source string (src) to a destination buffer (dest), enforcing a hard ceiling of n bytes copied. The program first anchors the base address by assigning start = dest so the original position isn't lost. It runs an initial loop to march the dest pointer to the end of its current string. Once positioned at the trailing null byte, a for loop tracks our position using a counter i alongside a pointer stream. This ensures the copying engine stops immediately if it encounters either the source's null terminator or if it hits the maximum allocation limit n. Finally, it drops a fresh null byte to safely lock down the new string end and returns the saved entry address.
 Key difference between 0 and 1 is that strn is capped by n where str will run on until it reaches nullbyte.
 
-**3 strncpy: *
+**3 strncpy: *char *_strncpy(char *dest, char *src, int n) is a program that duplicates a string by copying characters from a source address (src) directly into a destination buffer (dest) using a fixed ceiling of n bytes. The program initializes by capturing the base address with an anchor variable start = dest. It then runs an initial loop tracking the character index i, streaming data byte-by-byte from the source until it either encounters a null terminator or hits the maximum count n. If the source text runs out before reaching the n threshold, a second loop takes over, filling every remaining slot up to n with null bytes ('\0') to explicitly pad out the destination buffer memory before returning the anchored starting address.
 
 **4 iam kind of paranoid: *
 
