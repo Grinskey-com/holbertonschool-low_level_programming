@@ -48,7 +48,7 @@ Even more pointers, arrays and strings
 
 **1 memcpy: *char *_memcpy(char *dest, char *src, unsigned int n) is a programme that duplicates data by copying a specified size of raw memory from a source location (src) directly to a destination buffer (dest). The programme initialises by logging the destination's entry point onto an anchor variable start = dest. It then runs a for loop controlled by an unsigned integer counter i, which acts as a precision throttle. At each step within the loop, the engine streams data byte-by-byte by pulling the current value out of the source address, writing it directly into the destination address, and shifting both pointer positions forward. The loop terminates the moment it has shifted exactly n total bytes of data, safely preserving any neighbouring space in the destination buffer before returning the original anchored memory address.
 
-**2 strchr: *
+**2 strchr: *char *_strchr(char *s, char c) is a programme that scans a string forward to locate the very first occurrence of a specific targeted character. Instead of utilizing a starting anchor, the engine directly advances the pointer s to inspect the text stream character-by-character. Operating inside a continuous loop, the function evaluates the current byte against the target character c. If a match is identified, the programme immediately returns the precise memory address of that character, allowing the calling function to read the remaining remainder of the string. The evaluation loop explicitly processes the terminating null byte ('\0') as a valid target, ensuring that if a null character is sought, its address is returned correctly, whereas if the stream ends without any match, the programme terminates by returning NULL.
 
 **3 strspn: *
 
