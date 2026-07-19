@@ -23,7 +23,8 @@ and the program concludes by dropping down to a clean new line.
 
 **0 strcat: *char *_strcat(char *dest, char *src) is a program that concatenates two strings by appending the contents of a source string (src) directly to the end of a destination buffer (dest). The program first records the original entry point of the destination using an anchor pointer start = dest so it can be returned at the finish. It then runs an initial while loop to advance the dest pointer forward until it lands directly on its original terminating null byte ('\0'). Once positioned at the tail, a second while loop streams characters byte-by-byte from src into dest, overwriting the old terminator and advancing both pointers simultaneously. After the source string runs out, the program manually appends a fresh null byte to seal the newly combined string safely in memory, returning the original starting address.
 
-**1 strncat: *
+**1 strncat: *char *_strncat(char *dest, char *src, int n) is a program that appends text from a source string (src) to a destination buffer (dest), enforcing a hard ceiling of n bytes copied. The program first anchors the base address by assigning start = dest so the original position isn't lost. It runs an initial loop to march the dest pointer to the end of its current string. Once positioned at the trailing null byte, a for loop tracks our position using a counter i alongside a pointer stream. This ensures the copying engine stops immediately if it encounters either the source's null terminator or if it hits the maximum allocation limit n. Finally, it drops a fresh null byte to safely lock down the new string end and returns the saved entry address.
+Key difference between 0 and 1 is that strn is capped by n where str will run on until it reaches nullbyte.
 
 **3 strncpy: *
 
