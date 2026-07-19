@@ -28,7 +28,7 @@ Key difference between 0 and 1 is that strn is capped by n where str will run on
 
 **3 strncpy: *char *_strncpy(char *dest, char *src, int n) is a program that duplicates a string by copying characters from a source address (src) directly into a destination buffer (dest) using a fixed ceiling of n bytes. The program initializes by capturing the base address with an anchor variable start = dest. It then runs an initial loop tracking the character index i, streaming data byte-by-byte from the source until it either encounters a null terminator or hits the maximum count n. If the source text runs out before reaching the n threshold, a second loop takes over, filling every remaining slot up to n with null bytes ('\0') to explicitly pad out the destination buffer memory before returning the anchored starting address.
 
-**4 iam kind of paranoid: *
+**4 iam kind of paranoid: *int _strcmp(char *s1, char *s2) is a program that evaluates the alphabetical relationship between two strings by comparing their elements byte-by-byte. The comparison engine operates within a single while loop that steps both string pointer cursors forward simultaneously, matching character against character. The loop executes only as long as the current characters are identical and the first string hasn't concluded. The moment a mismatch is detected or the data streams end, the loop stops, and the program subtracts the ASCII value of the second string's character from the first. It returns this raw mathematical difference, resulting in zero for an exact match, a negative integer if the first string ranks lower, or a positive integer if it ranks higher.
 
 **5 always look up: *
 
