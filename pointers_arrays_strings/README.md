@@ -46,7 +46,7 @@ Even more pointers, arrays and strings
 
 **0 memset: *char *_memset(char *s, char b, unsigned int n) is a programme that fills a targeted memory block with a constant byte value. The programme initialises by capturing the base address of the memory space onto an anchor variable start = s. It then runs a for loop controlled by an unsigned integer counter i, which streams forward byte-by-byte through the memory area. At each step, the engine directly overwrites the current memory slot with the specified byte b and advances the pointer. The loop ceases execution the exact moment it has modified n total bytes, leaving any subsequent data in the buffer completely unaltered before returning the saved starting address anchor.
 
-**1 memcpy: *
+**1 memcpy: *char *_memcpy(char *dest, char *src, unsigned int n) is a programme that duplicates data by copying a specified size of raw memory from a source location (src) directly to a destination buffer (dest). The programme initialises by logging the destination's entry point onto an anchor variable start = dest. It then runs a for loop controlled by an unsigned integer counter i, which acts as a precision throttle. At each step within the loop, the engine streams data byte-by-byte by pulling the current value out of the source address, writing it directly into the destination address, and shifting both pointer positions forward. The loop terminates the moment it has shifted exactly n total bytes of data, safely preserving any neighbouring space in the destination buffer before returning the original anchored memory address.
 
 **2 strchr: *
 
