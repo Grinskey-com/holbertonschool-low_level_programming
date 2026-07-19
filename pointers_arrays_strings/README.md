@@ -33,7 +33,7 @@ Key difference between 0 and 1 is that strn is capped by n where str will run on
 
 **4 iam kind of paranoid: *void reverse_array(int *a, int n) is a program that reverses the order of elements within an integer array in-place. The program initializes two tracker pointers: a left anchor pointing to the beginning of the array and a right anchor pointing to the final index calculated using a + (n - 1). Operating within a while loop that runs only while the left address is lower than the right address, the engine uses a temporary variable temp to execute a classic three-step value swap between the elements. After each swap, the left pointer steps forward and the right pointer steps backward, closing inward until they meet in the center, leaving the array completely mirrored without allocating any additional memory arrays.
 
-**5 always look up: *
+**5 always look up: *char *string_toupper(char *str) is a program that modifies an existing string by converting every lowercase letter into its uppercase equivalent. The program begins by capturing the base address with an anchor variable start = str to ensure the entry point is preserved. A while loop then streams forward byte-by-byte through the string. At each step, an evaluation block checks if the current character's value falls inside the lowercase ASCII range ('a' through 'z'). If it matches, the mathematical engine subtracts 32 from the character's internal value to instantly shift it into uppercase territory while completely leaving symbols, numbers, and existing uppercase letters untouched, ultimately returning the original anchored address.
 
 **6 expect the best: *
 
