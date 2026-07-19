@@ -38,5 +38,24 @@ Key difference between 0 and 1 is that strn is capped by n where str will run on
 
 **6 expect the best: *char *cap_string(char *str) is a programme that capitalises the first letter of every word within an existing string based on a specified list of punctuation and spacing boundaries. The programme retains the string's entry position using an anchor variable start = str. It uses an alarm trigger variable initialized to 1 to track word boundaries. As a while loop streams forward byte-by-byte, the engine checks if the alarm is active when encountering a lowercase letter, subtracting 32 from its ASCII value to capitalise it. The trigger state updates dynamically, switching off when reading standard alphanumeric characters and instantly snapping back on whenever the cursor passes over spaces, tabs, newlines, or specific punctuation symbols, ultimately returning the original anchored memory address.
 
-**mozart: *char *leet(char *str) is a programme that transforms a string by encoding specific letters into their 1337 numeric equivalents under strict conditional limitations. The programme captures the base entry position using an anchor variable start = str. It bypasses the need for multiple logical checks by defining two parallel arrays: a target array containing both lower and uppercase variants of the characters to be replaced, and a matching replacement array containing the corresponding numbers. A primary while loop streams through the string byte-by-byte, while an inner for loop cycles through the translation array indices. Utilizing a single if statement, the engine checks for a match between the current character and the target array, substituting the letter with its mapped numeric counterpart instantly before returning the anchored address.
+**mozart: *char *leet(char *str) is a programme that transforms a string by encoding specific letters into their 1337 numeric equivalents under strict conditional limitations. The programme captures the base entry position using an anchor variable start = str. It bypasses the need for multiple logical checks by defining two parallel arrays: a target array containing both lower and uppercase variants of the characters to be replaced, and a matching replacement array containing the corresponding numbers. A primary while loop streams through the string byte-by-byte, while an inner for loop cycles through the translation array indices. Utilising a single if statement, the engine checks for a match between the current character and the target array, substituting the letter with its mapped numeric counterpart instantly before returning the anchored address.
 
+
+
+Even more pointers, arrays and strings
+
+**0 memset: *char *_memset(char *s, char b, unsigned int n) is a programme that fills a targeted memory block with a constant byte value. The programme initialises by capturing the base address of the memory space onto an anchor variable start = s. It then runs a for loop controlled by an unsigned integer counter i, which streams forward byte-by-byte through the memory area. At each step, the engine directly overwrites the current memory slot with the specified byte b and advances the pointer. The loop ceases execution the exact moment it has modified n total bytes, leaving any subsequent data in the buffer completely unaltered before returning the saved starting address anchor.
+
+**1 memcpy: *
+
+**2 strchr: *
+
+**3 strspn: *
+
+**4 strpbrk: *
+
+**5 strstr: *
+
+**6 chess is mental tourture: *
+
+**7 the line of life: *
