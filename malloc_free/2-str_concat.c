@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - concatenates two strings into a new allocated memory heap
- * @s1 is the first string
- * @s2 is the second string to append
+ * 'str_concat' - concatenates two strings into a new allocated memory heap
+ * @'s1' is the intial strinf and,
+ * @'s2' is the second string to append
  *
  */
 char *str_concat(char *s1, char *s2)
@@ -21,13 +21,9 @@ char *str_concat(char *s1, char *s2)
 
 	/* measure length */
 	for (len1 = 0; s1[len1] != '\0'; len1++)
-	{
-
-	}
+	{	}
 	for (len2 = 0; s2[len2] != '\0'; len2++)
-	{
-
-	}
+	{	}
 
 	/* Allocate */
 	concat = malloc(sizeof(char) * (len1 + len2 + 1));
