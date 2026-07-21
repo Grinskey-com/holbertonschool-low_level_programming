@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- *
+ * -this is a calc
  *
  *
  */
@@ -9,7 +9,7 @@
 int main(void) 
 {
 	int choice;
-	double a, b;
+	double a, b; /* double allows both an int and float to be input by user */
 	double result;
 
 	do 
@@ -22,7 +22,7 @@ int main(void)
 		printf("4. Divide\n");
 		printf("0. Quit\n");
 
-		/*Input from user, Ensure input used is an interger*/
+		/* Input from user, Ensure input used is an interger */
 		if (scanf("%d", &choice) != 1)
 		{
 			printf("Invalid input. Please enter a number.\n");
@@ -31,14 +31,14 @@ int main(void)
 				continue;
 		}	
 
-		/*next check the interger is within the option range 0-4*/
+		/* Next check the interger is within the option range 0-4 */
 		if (choice < 0 || choice > 4)
 		{	
-			printf("invalid niput. Please enter a number from 0-4.\n");
+			printf("Invalid input. Please enter a number from 0-4.\n");
 			continue;
 		}
 
-		/*Addition program*/		
+		/* Addition program */		
 		if (choice == 1)
 		{
 			printf("A: ");
@@ -51,7 +51,7 @@ int main(void)
 
 		}
 
-		/*Subtraction program*/		
+		/* Subtraction program */		
 		if (choice == 2)
 		{
 			printf("A: ");
