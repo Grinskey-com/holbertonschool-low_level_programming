@@ -21,5 +21,5 @@ void *malloc_checked(unsigned int b)
 		exit(98); /* termination status 98 */
 	}
 	/* Return the ptr */
-	return (ptr); 
+	return (ptr);
 }
