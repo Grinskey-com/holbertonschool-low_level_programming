@@ -2,10 +2,10 @@
 #define FUNCTION_POINTER_H
 
 /**
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
  */
 
 /* Function prototypes */
