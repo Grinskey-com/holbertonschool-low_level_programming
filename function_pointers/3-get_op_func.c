@@ -20,8 +20,7 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	/*
-	 * Scan array until first match or NULL */
+	 /* Scan array until first match or NULL */
 	while (ops[i].op != NULL && *(ops[i].op) != *s)
 		i++;
 
