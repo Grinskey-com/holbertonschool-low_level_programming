@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * print_list - Prints all the elements of a list_t list.
+ * @h: Pointer to the head of the list_t list.
+ *
+ * Return: The number of nodes in the list.
+ */
+size_t print_list(const list_t *h)
+{
+	/* set count to 0 */
+	size_t count = 0;
+
+	/* loop thru str plus NUll guard */
+	while (h != NULL)
+	{
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+
+		count++; /* increment count */
+		h = h->next; /* point to next node */
+	}
+
+	return (count);
+}
