@@ -2,15 +2,16 @@
 #include "lists.h"
 
 /**
- * print_dlistint - Prints all the elements of a dlistint_t list.
- * @h: Pointer to the head of the dlistint_t list.
+ * add_dnodeint - Adds a new node at the beginning of a dlistint_t list.
+ * @head: Double pointer to the head of the dlistint_t list.
+ * @n: Int value to store in the new node.
  *
- * Return: The number of nodes in the list.
+ * Return: Address of the new element, or NULL if it failed.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node;
-	
+
 	if (head == NULL)
 		return (NULL);
 
@@ -24,12 +25,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	new_node->prev = NULL;
 	new_node->next = *head;
 
-
 	/* link old head to new node */
 	if (*head != NULL)
 		(*head)->prev = new_node;
 
 	/* update head */
 	*head = new_node;
+
 	return (new_node);
 }
